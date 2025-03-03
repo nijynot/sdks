@@ -3,6 +3,7 @@ import { UnsupportedChainIdError } from "./errors.js";
 export enum ChainId {
   EthMainnet = 1,
   BaseMainnet = 8453,
+  HyperEVMTestnet = 998,
   // EthGoerliTestnet = 5,
   // PolygonMainnet = 137,
   // MumbaiTestnet = 80001,
@@ -100,6 +101,17 @@ export namespace ChainUtils {
       shortName: "Base",
       logoSrc: "https://cdn.morpho.org/assets/chains/base.png",
       identifier: "base",
+    },
+    [ChainId.HyperEVMTestnet]: {
+      name: "HyperEVM Testnet",
+      id: ChainId.HyperEVMTestnet,
+      nativeCurrency: { name: "Hyperliquid", symbol: "HYPE", decimals: 18 },
+      defaultRpcUrl: "https://rpc.hyperliquid-testnet.xyz/evm",
+      explorerUrl: "http://testnet.purrsec.com",
+      isTestnet: true,
+      shortName: "HyperEVM Testnet",
+      logoSrc: "",
+      identifier: "hypeevm-testnet",
     },
     // [ChainId.EthGoerliTestnet]: {
     //   name: "Ethereum Goerli Testnet",
